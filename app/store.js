@@ -1,9 +1,13 @@
-import Value from "./Models/Value.js";
+import Item from "./Models/Items.js";
+
+
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+
+  /** @type {Item[]} */
+  Items: [
+    new Item({ name: "fruit", price: 3, imgUrl: "//placeholdit.it/100x100", description: "its okay" }
+    )]
 };
 
 class Store {

@@ -1,8 +1,15 @@
-import Value from "../Models/Value.js";
 import store from "../store.js";
+import Item from "../Models/Items.js";
+
 
 //Public
-class ValuesService { }
+class MarketService {
+    addItem(rawItem) {
+        let item = new Item(rawItem)
 
-const SERVICE = new ValuesService();
+        store.State.Items.push(item)
+    }
+}
+
+const SERVICE = new MarketService();
 export default SERVICE;
